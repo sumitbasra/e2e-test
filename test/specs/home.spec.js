@@ -13,13 +13,11 @@ describe('homeandauto selectquote home page',  () => {
         browser.pause(3000);
     })
 
-    it('should click on the searchInputButton and display search value',() => {
+    it('should click on the searchInputButton and display search feature',() => {
     homePage.searchInputButton.click()
     browser.pause(3000)
     homePage.searchInput.click()
-    homePage.searchInput.setValue("Home")
-    homePage.searchInput.click()
-    browser.pause(5000);
+    browser.pause(3000);
    
    })
 
