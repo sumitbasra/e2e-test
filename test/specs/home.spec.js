@@ -14,36 +14,36 @@ describe('homeandauto selectquote home page',  () => {
     })
 
     it('should click on the searchInputButton and display search feature',() => {
-    homePage.searchInputButton.click()
-    browser.pause(3000)
-    homePage.searchInput.click()
-    browser.pause(3000);
+      homePage.searchInputButton.click()
+      browser.pause(3000)
+      homePage.searchInput.click()
+      browser.pause(3000);
    
    })
 
    it('should move to close button and click on it', () => {
-      homePage.closeButton.moveTo()
-      homePage.closeButton.click()
-      browser.pause(3000);
+     homePage.closeButton.moveTo()
+     homePage.closeButton.click()
+     browser.pause(3000);
 
    })  
    it('should click on Home Insurance button', () => {
-      homePage.homeInsuranceButton.moveTo()
-      homePage.homeInsuranceButton.click()
-      browser.pause(3000)
+     homePage.homeInsuranceButton.moveTo()
+     homePage.homeInsuranceButton.click()
+     browser.pause(3000)
    })
 
   it('verify if the banner container displaying its title', () => {
   expect(homePage.homeBannerTitle).toHaveTextContaining('Find the home insurance policy that’s right for you.')
   browser.pause(3000)
 
-})
+   })
 
    it('should move to Quote button, verify if its clickable and click on it', () => {
-      homePage.freeQuoteButton.moveTo()
-      expect(homePage.freeQuoteButton).toBeClickable()
-      homePage.freeQuoteButton.click()
-      browser.pause(3000)
+     homePage.freeQuoteButton.moveTo()
+     expect(homePage.freeQuoteButton).toBeClickable()
+     homePage.freeQuoteButton.click()
+     browser.pause(3000)
 
    }) 
 
