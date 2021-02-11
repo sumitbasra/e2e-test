@@ -1,3 +1,4 @@
+
 import { HomePage } from '../pageobjects/home.page'
 const homePage = new HomePage()
 
@@ -10,15 +11,18 @@ describe('homeandauto selectquote home page',  () => {
         const expected = "https://homeandauto.selectquote.com/insurance-overview/"
         const value = browser.getUrl()
         expect(value).toEqual(expected)
-        browser.pause(5000);
+        browser.pause(3000)
 
-    })
+   })
 
    it('should click on the searchInputButton and display search feature',() => {
       homePage.searchInputButton.waitForClickable({timeout:2000})
       homePage.searchInputButton.click()
+      
       homePage.searchInput.waitForClickable({timeout:2000})
       homePage.searchInput.click()
+      homePage.searchInput.setValue("Home")
+      expect(homePage.searchInput).toHaveValue("Home")
 
    })
 
@@ -27,7 +31,7 @@ describe('homeandauto selectquote home page',  () => {
       homePage.closeButton.waitForClickable({timeout:2000})
       homePage.closeButton.click()
 
-    }) 
+   }) 
    
    it('should click on Home Insurance button', () => {
       homePage.homeInsuranceButton.moveTo()
@@ -40,7 +44,7 @@ describe('homeandauto selectquote home page',  () => {
     expect(homePage.homeBannerTitle).toHaveTextContaining('Find the home insurance policy that’s right for you.')
     homePage.homeBannerTitle.waitForDisplayed({timeout:2000})
 
-  })
+   })
 
    it('should move to Quote button, verify if its clickable and click on it', () => {
       homePage.freeQuoteButton.moveTo()
@@ -54,12 +58,9 @@ describe('homeandauto selectquote home page',  () => {
    expect(browser).toHaveUrl('https://homeandauto.selectquote.com/quote-form/')
    browser.pause(2000)
 
-    })   
+   })   
 
 })
-
-
-
 
 
 
