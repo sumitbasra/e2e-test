@@ -19,10 +19,12 @@ describe('homeandauto selectquote home page',  () => {
       homePage.searchInputButton.waitForClickable({timeout:2000})
       homePage.searchInputButton.click()
       
-      homePage.searchInput.waitForClickable({timeout:2000})
+      homePage.searchInput.waitForClickable({timeout:5000})
       homePage.searchInput.click()
-      homePage.searchInput.setValue("Home")
-      expect(homePage.searchInput).toHaveValue("Home")
+      const value= homePage.searchInput.setValue("Home")
+      const expected=homePage.searchInput.addValue("Home")
+      expect(value).toEqual(expected)
+      browser.pause(3000)
 
    })
 
@@ -61,7 +63,6 @@ describe('homeandauto selectquote home page',  () => {
    })   
 
 })
-
 
 
 
