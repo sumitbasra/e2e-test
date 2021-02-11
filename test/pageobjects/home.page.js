@@ -6,7 +6,7 @@ class HomePage extends Page {
     get searchInput () { return $("//body/section[@id='overlay']")}
     get searchInputButton () { return $('#toggle-desktop')}
     get overviewButton () { return $('a=Overview')}
-    get closeButton () { return $("//*[@id='close']")}
+    get closeButton () { return $('#close')}
     
     get homeInsuranceButton () { return $('a=Home Insurance')}
     get homeBannerTitle () { return $("//p[contains(text(),'Find the home insurance policy that’s right for you.')]")}
