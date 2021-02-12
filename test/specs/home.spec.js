@@ -14,18 +14,18 @@ describe('homeandauto selectquote home page',  () => {
 
    })
 
-   it('should click on the searchInputButton and display search feature',() => {
+   it('should click on the searchInputButton and display a search result',() => {
       homePage.searchInputButton.waitForClickable({timeout:2000})
       homePage.searchInputButton.click()
       
-      homePage.searchInput.waitForClickable({timeout:3000})
+      homePage.searchInput.waitForClickable({timeout:2000})
       homePage.searchInput.click()
-
+    
+      var expected = 'Home and Auto'
+      homePage.searchInput.setValue(expected)
+      expect(homePage.searchResult).toHaveTextContaining(expected)
       homePage.searchInput.waitForDisplayed({timeout:5000})
-      const value= homePage.searchInput.setValue("Home")
-      const expected=homePage.searchInput.addValue("Home")
-      expect(value).toEqual(expected)
-
+      
    })
 
    it('should move to close button and click on it', () => {

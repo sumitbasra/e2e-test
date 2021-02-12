@@ -3,7 +3,8 @@ import { Page } from './page'
 class HomePage extends Page {
     // Elements go here
 
-    get searchInput() { return $ ('//div/input[@type="search"]')}
+    get searchResult() { return $ ("//*[contains(@class,'keyword') or contains(text(),'No results found for')]")}
+    get searchInput() { return $ ("(//input[@type='search'])[2]")}
     get searchInputButton () { return $('#toggle-desktop')}
     get overviewButton () { return $('a=Overview')}
     get closeButton () { return $('#close')}
