@@ -14,7 +14,7 @@ describe('medicare selectquote home page',  () => {
 
    it('should move to Plans and click on "Type of Plan Needed" button',() => {
      medicare.plansButton.moveTo()
- // medicare.plansButton.waitForClickable({timeout:2000})
+     medicare.plansButton.waitForClickable({timeout:2000})
      medicare.typeOfPlanNeeded.waitForClickable({timeout:2000})
      medicare.typeOfPlanNeeded.click()
 
