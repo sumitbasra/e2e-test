@@ -18,9 +18,8 @@ npm run test:head
 # Challenge 
 ---
 * Add minimum 5 more tests to home.spec.js
-* Add another spec file to test more than just home page
-Please decide what needs to be tested here and be ready to explain your approach.
-Feel free to make any changes
+* Add another spec file to test more than just home page. Please decide what needs to be tested here and be ready to explain your approach.
+* Feel free to make any changes and expain by adding comments 
 
 # Submission
 ---
